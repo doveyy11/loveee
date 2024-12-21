@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>浪漫表白网页</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #ff9a9e;
+      background: #fff;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff9a9e;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: none;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>点一下，告诉你个秘密！</h1>
+    <button onclick="showMessage()">点我</button>
+    <div class="message" id="message">我喜欢你💖！</div>
+  </div>
+
+  <script>
+    function showMessage() {
+      const message = document.getElementById('message');
+      message.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
